@@ -1,1 +1,52 @@
-
+# This is a PC set up by openSUSE YAST installer. None were added later. I did change the options for the BTRFS partitions and volumes.
+# All drives are local on the system. At the far right side, is the path for each and could be used in place of the UUID if you choose.
+#
+# / root must ALWAYS be mounted first! The rest can be in any order.
+#
+#	<Disk UUID Name>						<Mount Point>		   <Type>	<Mounting Options>																				<Path Information>
+# NVME0 500 GB (Very Fast)
+UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /                       btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async									0  0	#  /dev/nvme0n1p2
+UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /var                    btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/var         	        0  0	#  /dev/nvme0n1p2
+UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /usr/local              btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/usr/local           	0  0	#  /dev/nvme0n1p2
+UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /srv                    btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/srv                 	0  0	#  /dev/nvme0n1p2
+UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /root                   btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/root                	0  0	#  /dev/nvme0n1p2
+UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /opt                    btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/opt                 	0  0	#  /dev/nvme0n1p2
+UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /boot/grub2/x86_64-efi  btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/boot/grub2/x86_64-efi	0  0	#  /dev/nvme0n1p2
+UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /boot/grub2/i386-pc     btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/boot/grub2/i386-pc  	0  0	#  /dev/nvme0n1p2
+UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /.snapshots             btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/.snapshots          	0  0	#  /dev/nvme0n1p2
+UUID=2618-10E1                             /boot/efi               vfat   utf8                          															0  2	#  /dev/nvme0n1p1
+#
+# NVME1 1,000 GB (Very Fast)
+UUID=f27036e4-4e3c-4186-8070-b58acb26b549  /home                   ext4   data=ordered                  															0  2	#  /dev/nvme1n1p1
+#
+# HHD 4,000 GB (Slow)
+UUID=a89fa57b-f843-44d6-a135-e095946f998e  /4TB-HDD                ext4   user,data=ordered                															0  2	#  /dev/sda1
+#
+# SSD 500 GB (Fast)
+UUID=235e9ce5-2189-4e85-875e-9b5c6d639357  /VMs                    ext4   user,data=ordered     	        														0  2	#  /dev/sdb1
+#
+# SSD 1,000 GB (Fast)
+UUID=e828232f-58c6-4cb4-a2ca-62cbb12a6a41  /HomeBack               ext4   user,data=ordered             															0  2	#  /dev/sdc1
+#
+#########################################################################################
+# Next PC
+#########################################################################################
+#
+#This is a PC set up by openSUSE YAST installer. SSHFS shares were added later. I did change the options for the BTRFS partitions and volumes.
+#
+UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /                       btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async                               0  0
+UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /var                    btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/var                   0  0
+UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /usr/local              btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/usr/local           0  0
+UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /srv                    btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/srv                 0  0
+UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /root                   btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/root                0  0
+UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /opt                    btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/opt                 0  0
+UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /home                   btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/home                0  0
+UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /boot/grub2/x86_64-efi  btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/boot/grub2/x86_64-efi  0  0
+UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /boot/grub2/i386-pc     btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/boot/grub2/i386-pc  0  0
+UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /.snapshots             btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/.snapshots          0  0
+UUID=1220-0499                             /boot/efi               vfat   utf8                          0  2
+#
+#
+# SSHFS Shares from heisenberg
+wilson@heisenberg:/4TB-HDD /4TB-HDD fuse.sshfs default_permissions,user,delay_connect,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other,identityfile=/home/wilson/.ssh/id_rsa,idmap=user,uid=1000,gid=1000 0 0
+wilson@heisenberg:/HomeBack /HomeBack fuse.sshfs default_permissions,user,delay_connect,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other,identityfile=/home/wilson/.ssh/id_rsa,idmap=user,uid=1000,gid=1000 0 0
