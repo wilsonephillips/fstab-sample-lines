@@ -1,5 +1,6 @@
 # This is a PC set up by openSUSE YAST installer. None were added later. I did change the options for the BTRFS partitions and volumes.
 # All drives are local on the system. At the far right side, is the path for each and could be used in place of the UUID if you choose.
+# No Swap Partition is used on the first two PCs, because they both use a ZRAM Swap File.
 #
 # / root must ALWAYS be mounted first! The rest can be in any order.
 #
