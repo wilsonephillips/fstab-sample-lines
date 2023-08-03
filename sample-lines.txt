@@ -51,3 +51,8 @@ UUID=1220-0499                             /boot/efi               vfat   utf8  
 # SSHFS Shares from heisenberg
 wilson@heisenberg:/4TB-HDD /4TB-HDD fuse.sshfs default_permissions,user,delay_connect,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other,identityfile=/home/wilson/.ssh/id_rsa,idmap=user,uid=1000,gid=1000 0 0
 wilson@heisenberg:/HomeBack /HomeBack fuse.sshfs default_permissions,user,delay_connect,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other,identityfile=/home/wilson/.ssh/id_rsa,idmap=user,uid=1000,gid=1000 0 0
+#
+#########################################################################################
+# Next PC
+#########################################################################################
+#
