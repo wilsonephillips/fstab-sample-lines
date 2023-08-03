@@ -6,7 +6,7 @@
 #
 #	<Disk UUID Name>						<Mount Point>		   <Type>	<Mounting Options>																				<Path Information>
 # NVME0 500 GB (Very Fast)
-UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /                       btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async									0  0	#  /dev/nvme0n1p2
+UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /                       btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async									0  1	#  /dev/nvme0n1p2
 UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /var                    btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/var         	        0  0	#  /dev/nvme0n1p2
 UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /usr/local              btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/usr/local           	0  0	#  /dev/nvme0n1p2
 UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /srv                    btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/srv                 	0  0	#  /dev/nvme0n1p2
@@ -35,7 +35,7 @@ UUID=e828232f-58c6-4cb4-a2ca-62cbb12a6a41  /HomeBack               ext4   user,d
 #
 #This is a PC set up by openSUSE YAST installer. SSHFS shares were added later. I did change the options for the BTRFS partitions and volumes.
 #
-UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /                       btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async                               0  0
+UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /                       btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async                               0  1
 UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /var                    btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/var                   0  0
 UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /usr/local              btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/usr/local           0  0
 UUID=848e210e-a075-4ea6-ba61-4b1c6b66a665  /srv                    btrfs  rw,noatime,space_cache=v2,compress=zstd,ssd,discard=async,subvol=/@/srv                 0  0
@@ -61,7 +61,7 @@ wilson@heisenberg:/HomeBack /HomeBack fuse.sshfs default_permissions,user,delay_
 # / root must ALWAYS be mounted first! The rest can be in any order.
 #
 # NVME0 500 GB (Very Fast)
-UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /                       btrfs  defaults							0  0	# /dev/nvme0n1p2
+UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /                       btrfs  defaults							0  1	# /dev/nvme0n1p2
 UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /var                    btrfs  subvol=/@/var         	        0  0	# /dev/nvme0n1p2
 UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /usr/local              btrfs  subvol=/@/usr/local           	0  0	# /dev/nvme0n1p2
 UUID=6dd2d662-8bcb-4ab5-a58c-4df075074264  /srv                    btrfs  subvol=/@/srv                 	0  0	# /dev/nvme0n1p2
